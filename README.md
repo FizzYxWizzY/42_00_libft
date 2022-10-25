@@ -1,3 +1,3 @@
 # 42_01_libft
-Project 00 of 42lausanne;
+Project00 of 42 lausanne;
 create your own library of functions.
