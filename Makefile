@@ -6,14 +6,14 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 16:01:02 by mflury            #+#    #+#              #
-#    Updated: 2022/10/28 18:18:54 by mflury           ###   ########.fr        #
+#    Updated: 2022/10/28 18:48:20 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 HEADER = libft.h
 OBJ = $(SRC:.c=.o)
-CC = gcc
+CC = @gcc
 CFLAGS += -Wall -Werror -Wextra -pedantic -pedantic-errors
 
 SRC = $(SOURCE_P1) $(SOURCE_P2)
