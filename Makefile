@@ -10,6 +10,10 @@
 #                                                                              #
 # **************************************************************************** #
 
+### DOESNT WORK YET!
+### mflury@c1r5s7 libft % make
+### make: *** No rule to make target `libft.h', needed by `libft.a'.  Stop.
+
 NAME = libft.a
 HEADER = libft.h
 OBJ = $(SRC:.c=.o)
