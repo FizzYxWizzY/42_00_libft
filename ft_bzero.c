@@ -6,17 +6,17 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 17:13:34 by mflury            #+#    #+#             */
-/*   Updated: 2022/10/27 17:19:18 by mflury           ###   ########.fr       */
+/*   Updated: 2022/10/31 20:04:02 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 //pas tester, pas encore fait la libft pour l instant
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, '\0', n * sizeof(char));
+	ft_memset(s, 0, n * sizeof(char));
 }
 /*
 int main (void)

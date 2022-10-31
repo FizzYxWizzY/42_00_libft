@@ -6,10 +6,11 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:54:27 by mflury            #+#    #+#             */
-/*   Updated: 2022/10/27 15:06:12 by mflury           ###   ########.fr       */
+/*   Updated: 2022/10/31 19:47:38 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 //#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
@@ -25,7 +26,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (s[i] == (char) c)
 			return (&((char *)s)[i]);
-		else 
+		else
 			i--;
 	}
 	return (0);

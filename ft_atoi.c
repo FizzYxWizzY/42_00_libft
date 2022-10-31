@@ -10,19 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
+#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
-	int	res;
-	int	sign;
+	int				res;
+	int				sign;
 	unsigned int	i;
 
 	res = 0;
 	sign = 1;
 	i = 0;
-
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || \
 			str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
 		i++;
 	while (str[i] == '-' || str[i] == '+')
