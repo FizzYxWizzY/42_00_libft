@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 17:45:40 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/01 18:38:22 by mflury           ###   ########.fr       */
+/*   Created: 2022/11/01 18:44:23 by mflury            #+#    #+#             */
+/*   Updated: 2022/11/03 17:58:33 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	size_t	i;
+	char	*psrc;
+	char	*pdst;
 
+	pdst = (char *)dst;
+	psrc = (char *)src;
 	i = 0;
+	if (!(psrc || pdst))
+		return (NULL);
 	while (i < n)
 	{
-		((char *)dst)[i] = ((char *)src)[i];
+		pdst[i] = psrc[i];
 		i++;
 	}
 	return (dst);
@@ -28,9 +33,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 /*
 int	main(void)
 {
-	char	dst[50] = "42 lausanne";
-	char	*src = "xyz";
+	char	dst[100] = "6*7lausanne";
+	char	*src = "";
 	
-	printf("%s\n", ft_memcpy(dst, src, 1));
+	printf("%s\n", ft_memmove(dst, src, 3));
 }
 */

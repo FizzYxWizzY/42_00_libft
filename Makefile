@@ -6,7 +6,7 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 16:01:02 by mflury            #+#    #+#              #
-#    Updated: 2022/10/31 20:07:03 by mflury           ###   ########.fr        #
+#    Updated: 2022/11/01 18:54:17 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = $(SRC_P1) $(SRC_P2)
 
 SRC_P1 = \
 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_atoi.c \
-	ft_memset.c ft_bzero.c ft_memcpy.c \
+	ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
 	ft_strlen.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c \
 	ft_toupper.c ft_tolower.c \
 
@@ -41,7 +41,7 @@ $(NAME) : $(OBJ) $(HEADER)
 
 %.o : %.c
 	@echo Creating objets files $<
-	@$(CC) -o $@ -I . -c $< $(CFLAGS)
+	@$(CC) -o $@  -c $< $(CFLAGS)
 
 clean :
 	@echo Deleting objets files
