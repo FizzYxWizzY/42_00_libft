@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:21:12 by mflury            #+#    #+#             */
-/*   Updated: 2022/10/31 18:22:47 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/04 19:01:22 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ char	*ft_strchr(const char *s, int c)
 			return (&((char *)s)[i]);
 		}
 		i++;
+	}
+	if (s[i] == (char) c)
+	{
+		return (&((char *)s)[i]);
 	}
 	return (0);
 }
