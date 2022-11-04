@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 18:44:23 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/03 17:58:33 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/04 14:34:05 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,27 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t	i;
-	char	*psrc;
-	char	*pdst;
+	char	*ptsrc;
+	char	*ptdst;
 
-	pdst = (char *)dst;
-	psrc = (char *)src;
-	i = 0;
-	if (!(psrc || pdst))
+	ptdst = (char *)dst;
+	ptsrc = (char *)src;
+	if ((ptsrc == NULL) && (ptdst == NULL))
 		return (NULL);
-	while (i < n)
+	if ((ptsrc < ptdst) && (ptdst < ptsrc + n))
 	{
-		pdst[i] = psrc[i];
-		i++;
+		ptdst += n;
+		ptsrc += n;
+		while (n)
+		{
+			*--ptdst = *--ptsrc;
+			n--;
+		}
+	}
+	else
+	{
+		while (n--)
+			*ptdst++ = *ptsrc++;
 	}
 	return (dst);
 }
@@ -34,7 +42,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 int	main(void)
 {
 	char	dst[100] = "6*7lausanne";
-	char	*src = "";
+	char	*src = "42 ";
 	
 	printf("%s\n", ft_memmove(dst, src, 3));
 }
