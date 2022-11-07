@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:54:27 by mflury            #+#    #+#             */
-/*   Updated: 2022/10/31 19:47:38 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/07 13:04:14 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		i++;
 	}
-	while (i != 0)
+	while ((i + 1) != 0)
 	{
 		if (s[i] == (char) c)
 			return (&((char *)s)[i]);
