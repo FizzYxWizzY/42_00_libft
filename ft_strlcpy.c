@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:04:47 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/11 15:11:48 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/11 16:00:40 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	return (i);
 }
-/*
-int	main(void)
-{
-	char	d[50] = "42 ";
-	char	s[] = "Lausanne";
-	printf("%lu\n", ft_strlcpy(d, s, sizeof(d)));
-	printf("%s\n", d);
-}
-*/

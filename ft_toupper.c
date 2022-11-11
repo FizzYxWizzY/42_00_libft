@@ -20,9 +20,3 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
-/*
-int main(void)
-{
-	printf("%c\n", ft_toupper('x'));
-}
-*/

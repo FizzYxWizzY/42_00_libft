@@ -6,7 +6,7 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 16:01:02 by mflury            #+#    #+#              #
-#    Updated: 2022/11/11 15:13:04 by mflury           ###   ########.fr        #
+#    Updated: 2022/11/11 16:09:37 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRC_P1 = \
 	ft_memset.c ft_bzero.c ft_memcpy.c ft_memcmp.c ft_memmove.c ft_memchr.c \
 	ft_strlen.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c \
 	ft_toupper.c ft_tolower.c ft_strlcat.c ft_strlcpy.c \
+	ft_strdup.c ft_calloc.c \
 
 SRC_P2 = \
 	\

@@ -40,10 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-/*
-int main(void)
-{
-	char *str = "   ---+--+0424242lausanne42";
-	printf("%d\n", ft_atoi(str));
-}
-*/

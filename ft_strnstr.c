@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:02:11 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/07 17:09:53 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/11 16:00:59 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,3 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	}
 	return (NULL);
 }
-/*
-int	main()
-{
-	char	*str = "putin de merde marche";
-	char	*to_find = "ib";
-
-	printf("%s\n", ft_strnstr(str, to_find, '7'));
-}
-*/

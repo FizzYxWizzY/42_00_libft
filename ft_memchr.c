@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:27:30 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/04 17:19:48 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/11 15:58:44 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-int main(void)
-{
-	char	*s = "42 lausanne";
-	int		c = '2';
-
-	printf("%s\n", ft_memchr(s, c, strlen(s)));
-}
-*/

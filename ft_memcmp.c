@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 14:40:59 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/04 16:09:41 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/11 15:58:51 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	char	*s1 = "42 lausanne";
-	char	*s2 = "42 loosanne";
-
-	printf ("%d\n", ft_memcmp(s1, s2, 6));
-}
-*/

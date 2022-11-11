@@ -6,13 +6,15 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 12:48:59 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/08 17:19:31 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/11 17:02:52 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <unistd.h>
 # include <stdio.h>
+# include <stdlib.h>
 # include <string.h>
 
 //part 1:

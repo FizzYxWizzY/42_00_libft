@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:21:12 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/04 19:01:22 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/11 16:00:23 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	char	*str = "42 lausanne";
-	char	c = '\0';
-	printf ("%s\n", ft_strchr(str, c));
-	
-}
-*/

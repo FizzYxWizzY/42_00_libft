@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 18:44:23 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/04 14:34:05 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/11 15:59:05 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,3 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-/*
-int	main(void)
-{
-	char	dst[100] = "6*7lausanne";
-	char	*src = "42 ";
-	
-	printf("%s\n", ft_memmove(dst, src, 3));
-}
-*/

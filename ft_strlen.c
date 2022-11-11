@@ -24,10 +24,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
-/*
-int	main()
-{
-	char *str = "Hello 42";
-	printf("%d\n", ft_strlen(str));
-}
-*/
