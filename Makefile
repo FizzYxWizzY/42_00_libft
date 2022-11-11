@@ -6,14 +6,14 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 16:01:02 by mflury            #+#    #+#              #
-#    Updated: 2022/11/04 17:21:55 by mflury           ###   ########.fr        #
+#    Updated: 2022/11/11 15:13:04 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 OBJ = $(SRC:.c=.o)
 CC = @gcc
-CFLAGS += -Wall -Werror -Wextra -pedantic -pedantic-errors
+CFLAGS = -Wall -Werror -Wextra
 
 SRC = $(SRC_P1) $(SRC_P2)
 
@@ -21,7 +21,7 @@ SRC_P1 = \
 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_atoi.c \
 	ft_memset.c ft_bzero.c ft_memcpy.c ft_memcmp.c ft_memmove.c ft_memchr.c \
 	ft_strlen.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c \
-	ft_toupper.c ft_tolower.c \
+	ft_toupper.c ft_tolower.c ft_strlcat.c ft_strlcpy.c \
 
 SRC_P2 = \
 	\
@@ -33,15 +33,16 @@ SRC_BONUS = \
 	\
 	\
 
+
 all : $(NAME)
 
-$(NAME) : $(OBJ) $(HEADER)
+$(NAME) : $(OBJ)
 	@echo Creating static library
 	@ar rcs $(NAME) $(OBJ)
 
 %.o : %.c
 	@echo Creating objets files $<
-	@$(CC) -o $@  -c $< $(CFLAGS)
+	@$(CC) -o $@ -c $< $(CFLAGS)
 
 clean :
 	@echo Deleting objets files
