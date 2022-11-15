@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 18:04:58 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/15 14:10:14 by mflury           ###   ########.fr       */
+/*   Created: 2022/11/15 15:20:04 by mflury            #+#    #+#             */
+/*   Updated: 2022/11/15 16:08:14 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	char	*sub;
+	char	nbr;
 
-	i = 0;
-	if (!s)
-		return (NULL);
-	if (start > ft_strlen(s))
-		return (ft_calloc(1, 1));
-	if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	sub = ft_calloc(len + 1, sizeof(char));
-	if (!sub)
-		return (NULL);
-	while (i < len)
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else if (n < 0)
 	{
-		sub[i] = s[start + i];
-		i++;
+		write(fd, "-", 1);
+		n *= -1;
+		ft_putnbr_fd(n, fd);
 	}
-	return (sub);
+	else
+	{
+		if (n > 9)
+		{
+			ft_putnbr_fd(n / 10, fd);
+			ft_putnbr_fd(n % 10, fd);
+		}
+		else
+		{
+			nbr = n + 48;
+			write(fd, &nbr, 1);
+		}
+	}
 }

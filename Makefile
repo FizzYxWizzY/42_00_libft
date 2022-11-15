@@ -6,7 +6,7 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 16:01:02 by mflury            #+#    #+#              #
-#    Updated: 2022/11/11 18:41:29 by mflury           ###   ########.fr        #
+#    Updated: 2022/11/15 16:07:52 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC_P1 = \
 SRC_P2 = \
 	ft_substr.c \
 	\
-	\
+	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 
 SRC_BONUS = \
 	\
