@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:02:13 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/11 17:48:04 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/16 19:37:32 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	*ft_calloc(size_t count, size_t size)
 	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, ft_strlen(ptr));
+	ft_bzero(ptr, count * size);
 	return (ptr);
 }
