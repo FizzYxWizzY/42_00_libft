@@ -6,12 +6,12 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:54:13 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/18 19:23:05 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/18 20:09:17 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
+
 static unsigned int	ft_wcount(const char *s, char c)
 {
 	unsigned int	i;
@@ -82,9 +82,6 @@ static void	ft_wwrite(char **tab, const char *s, char c)
 	}
 }
 
-
-
-
 char	**ft_split(const char *s, char c)
 {
 	char	**tab;
@@ -96,4 +93,3 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	
 }
-*/
