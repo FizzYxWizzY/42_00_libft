@@ -6,90 +6,93 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:54:13 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/18 20:09:17 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/23 14:22:04 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int	ft_wcount(const char *s, char c)
+static unsigned int	ft_wcount(char const *s, char c)
 {
 	unsigned int	i;
-	unsigned int	state;
-	unsigned int	count;
+	unsigned int	tab;
 
+	if (!s[0])
+		return (0);
 	i = 0;
-	state = 0;
-	count = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			state = 0;
-		if (s[i] != c)
-			state = 1;
-		if (state == 1 && s[i] && s[i + 1] == c)
-			count++;
+	while (s[i] && s[i] == c)
 		i++;
-	}
-	return (count);
-}
-
-static int	ft_wlen(char *s, unsigned int start, char c)
-{
-	int	i;
-	
-	i = 0;
-	while (s[start] == c)
-		start++;
-	while (s[start])
-	{
-		if (s[start] == c)
-			break ;
-		i++;
-		start++;
-	}
-	return (i);
-}
-
-static void	ft_wwrite(char **tab, const char *s, char c)
-{
-	unsigned int	i;
-	unsigned int	nlist;
-	unsigned int	lastpos;
-
-	i = 0;
-	nlist = 0;
-	lastpos = 0;
+	tab = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
 		{
-			i++;
-			lastpos = 0;
+			tab++;
+			while (s[i] && s[i] == c)
+				i++;
+			continue ;
 		}
-		while (s[i] != c)
-		{
-			tab[nlist][lastpos] = s[i];
-			if (s[i + 1] == c)
-			{
-				tab[nlist][lastpos + 1] = '\0';
-				nlist++;
-				tab[nlist] = malloc(count_word(s, i, c) * sizeof(char));
-			}
-			i++;
-			lastpos++;
-		}
+		i++;
+	}
+	if (s[i - 1] != c)
+		tab++;
+	return (tab);
+}
+
+static void	ft_row(char **str, unsigned int *str_len, char c)
+{
+	unsigned int	i;
+
+	*str += *str_len;
+	*str_len = 0;
+	i = 0;
+	while (**str && **str == c)
+		(*str)++;
+	while ((*str)[i])
+	{
+		if ((*str)[i] == c)
+			return ;
+		(*str_len)++;
+		i++;
 	}
 }
 
-char	**ft_split(const char *s, char c)
+static char	**ft_free_split(char **tab)
 {
-	char	**tab;
+	unsigned int	i;
 
-	if (!c)
-		return (s);
-	tab = ft_calloc((ft_wcount(s, c) + 1), sizeof(char *));
-	if (!tab || !s)
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return (NULL);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char			**tab;
+	char			*str;
+	unsigned int	i;
+	unsigned int	str_len;
+
+	tab = ft_calloc(sizeof(char *), (ft_wcount(s, c) + 1));
+	if (!tab)
 		return (NULL);
-	
+	str = (char *)s;
+	str_len = 0;
+	i = 0;
+	while (i < ft_wcount(s, c))
+	{
+		ft_row(&str, &str_len, c);
+		tab[i] = ft_calloc(sizeof(char), (str_len + 1));
+		if (tab[i] == NULL)
+			return (ft_free_split(tab));
+		ft_strlcpy(tab[i], str, str_len + 1);
+		i++;
+	}
+	tab[i] = NULL;
+	return (tab);
 }
