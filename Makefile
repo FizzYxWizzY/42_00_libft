@@ -6,12 +6,13 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 16:01:02 by mflury            #+#    #+#              #
-#    Updated: 2022/11/23 17:00:10 by mflury           ###   ########.fr        #
+#    Updated: 2022/11/24 21:07:39 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 OBJ = $(SRC:.c=.o)
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
 CC = @gcc
 CFLAGS = -Wall -Werror -Wextra
 
@@ -40,6 +41,9 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	@echo Creating static library
 	@ar rcs $(NAME) $(OBJ)
+
+bonus : $(OBJ) $(OBJ_BONUS)
+	@ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
 
 %.o : %.c
 	@echo Creating objets files $<
