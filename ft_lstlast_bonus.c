@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/25 16:11:07 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/28 14:13:11 by mflury           ###   ########.fr       */
+/*   Created: 2022/11/28 14:07:56 by mflury            #+#    #+#             */
+/*   Updated: 2022/11/28 14:08:08 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	len;
-
-	len = 0;
-	while (lst)
+	if (!lst)
+		return (lst);
+	while (lst->next)
 	{
 		lst = lst->next;
-		len++;
 	}
-	return (len);
+	return (lst);
 }
