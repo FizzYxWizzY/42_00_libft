@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+
+// fonction qui met en minuscule le char c si majuscule.
 
 int	ft_tolower(int c)
 {

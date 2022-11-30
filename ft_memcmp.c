@@ -6,11 +6,14 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 14:40:59 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/11 15:58:51 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 15:09:48 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// fonction qui compare les strings s1 et s2 sur une longeur n,
+// retourne 0 si pareil sinon retourne autre chose.
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

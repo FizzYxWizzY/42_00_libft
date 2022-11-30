@@ -6,14 +6,14 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:43:24 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/16 19:37:35 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 15:14:33 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
-// "askip sa marche comme sa" -un piscineux
+// fonction qui set les elements de la string s
+// avec le char c sur une longueur n.
 
 void	*ft_memset(void *s, int c, size_t n)
 {

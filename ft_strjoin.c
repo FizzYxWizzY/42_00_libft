@@ -6,11 +6,14 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:28:15 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/24 21:07:40 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 16:22:53 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Alloue (avec malloc(3)) et retourne une nouvelle
+// chaîne, résultat de la concaténation de s1 et s2.
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+
+// fonction qui compare les strings s1 et s2 sur une longueur n.
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {

@@ -6,11 +6,16 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 18:04:58 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/15 14:10:14 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 15:32:03 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Alloue (avec malloc(3)) et retourne une chaîne de
+// caractères issue de la chaîne ’s’.
+// Cette nouvelle chaîne commence à l’index ’start’ et
+// a pour taille maximale ’len’.
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {

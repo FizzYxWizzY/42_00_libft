@@ -13,6 +13,9 @@
 #include "libft.h"
 #include <stdio.h>
 
+// fonction qui transforme une string de char en int,
+// detecte les spaces, marche avec les nbrs negatifs.
+
 int	ft_atoi(const char *str)
 {
 	int				res;

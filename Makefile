@@ -6,7 +6,7 @@
 #    By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 16:01:02 by mflury            #+#    #+#              #
-#    Updated: 2022/11/29 13:39:51 by mflury           ###   ########.fr        #
+#    Updated: 2022/11/30 17:00:09 by mflury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ bonus : $(OBJ) $(OBJ_BONUS)
 
 clean :
 	@echo Deleting objets files
-	@rm -f $(OBJ)
+	@rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean : clean
 	@echo Deleting others files

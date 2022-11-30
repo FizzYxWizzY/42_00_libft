@@ -6,11 +6,13 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 16:11:07 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/28 14:13:11 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 16:59:13 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Compte le nombre d’éléments de la liste.
 
 int	ft_lstsize(t_list *lst)
 {

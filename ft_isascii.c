@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+
+// fonction qui detecte si le char est dans la table ascii.
 
 int	ft_isascii(int c)
 {

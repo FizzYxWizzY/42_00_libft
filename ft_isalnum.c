@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+
+// fonction qui detecte si le char est alphanumerique.
 
 int	ft_isalnum(int c)
 {

@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
+
+// fonction qui detecte si le char est printable.
 
 int	ft_isprint(int c)
 {

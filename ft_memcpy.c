@@ -6,12 +6,14 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 17:45:40 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/11 15:58:57 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 15:12:16 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
+// fonction qui copie la source src dans la destination dest
+// sur une longueur n.
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

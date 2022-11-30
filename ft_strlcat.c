@@ -6,11 +6,13 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:46:20 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/11 16:00:33 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 15:26:17 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// fonction qui concataine les strings s1 et s2.
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

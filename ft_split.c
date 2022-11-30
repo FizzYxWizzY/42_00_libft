@@ -6,28 +6,31 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:54:13 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/23 14:22:04 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 14:36:21 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// sous fonction qui compte les les "mots" dans la string s
+// avec un separateur c.
+
 static unsigned int	ft_wcount(char const *s, char c)
 {
 	unsigned int	i;
-	unsigned int	tab;
+	unsigned int	count;
 
 	if (!s[0])
 		return (0);
 	i = 0;
 	while (s[i] && s[i] == c)
 		i++;
-	tab = 0;
+	count = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
 		{
-			tab++;
+			count++;
 			while (s[i] && s[i] == c)
 				i++;
 			continue ;
@@ -35,16 +38,19 @@ static unsigned int	ft_wcount(char const *s, char c)
 		i++;
 	}
 	if (s[i - 1] != c)
-		tab++;
-	return (tab);
+		count++;
+	return (count);
 }
 
-static void	ft_row(char **str, unsigned int *str_len, char c)
+// sous fonction qui compte la longeur des "mots" dans la string str
+// avec le separateur c, retenu dans strlen.
+
+static void	ft_row(char **str, unsigned int *strlen, char c)
 {
 	unsigned int	i;
 
-	*str += *str_len;
-	*str_len = 0;
+	*str += *strlen;
+	*strlen = 0;
 	i = 0;
 	while (**str && **str == c)
 		(*str)++;
@@ -52,12 +58,15 @@ static void	ft_row(char **str, unsigned int *str_len, char c)
 	{
 		if ((*str)[i] == c)
 			return ;
-		(*str_len)++;
+		(*strlen)++;
 		i++;
 	}
 }
 
-static char	**ft_free_split(char **tab)
+// sous fonction qui free tout les elements du tabeau tab[i]
+// puis le tableau tab lui meme.
+
+static char	**ft_free_all(char **tab)
 {
 	unsigned int	i;
 
@@ -71,26 +80,29 @@ static char	**ft_free_split(char **tab)
 	return (NULL);
 }
 
+// fonction utilisant les sous fonctions ci dessus pour separer
+// les "mots" d une string et de les placer dans un tableau.
+
 char	**ft_split(char const *s, char c)
 {
 	char			**tab;
 	char			*str;
 	unsigned int	i;
-	unsigned int	str_len;
+	unsigned int	strlen;
 
 	tab = ft_calloc(sizeof(char *), (ft_wcount(s, c) + 1));
 	if (!tab)
 		return (NULL);
 	str = (char *)s;
-	str_len = 0;
+	strlen = 0;
 	i = 0;
 	while (i < ft_wcount(s, c))
 	{
-		ft_row(&str, &str_len, c);
-		tab[i] = ft_calloc(sizeof(char), (str_len + 1));
+		ft_row(&str, &strlen, c);
+		tab[i] = ft_calloc(sizeof(char), (strlen + 1));
 		if (tab[i] == NULL)
-			return (ft_free_split(tab));
-		ft_strlcpy(tab[i], str, str_len + 1);
+			return (ft_free_all(tab));
+		ft_strlcpy(tab[i], str, strlen + 1);
 		i++;
 	}
 	tab[i] = NULL;

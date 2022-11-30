@@ -6,11 +6,14 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 18:44:23 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/11 15:59:05 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 15:13:23 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// fonction qui deplace la source src dans la destination dst
+// sur une longueur n.
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {

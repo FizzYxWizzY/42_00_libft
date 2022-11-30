@@ -6,12 +6,15 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 16:02:13 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/16 19:37:32 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 14:43:29 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+// fonction qui associe malloc et bzero, permetant de s assurer 
+// de ne pas avoir de donnees residuelles.
 
 void	*ft_calloc(size_t count, size_t size)
 {

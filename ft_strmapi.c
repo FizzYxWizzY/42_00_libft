@@ -6,11 +6,16 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 14:41:49 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/24 21:07:37 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 15:29:41 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Applique la fonction ’f’ à chaque caractère de la
+// chaîne de caractères passée en argument pour créer
+// une nouvelle chaîne de caractères (avec malloc(3))
+// résultant des applications successives de ’f’.
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

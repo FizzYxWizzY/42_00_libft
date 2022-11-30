@@ -6,11 +6,16 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 15:13:08 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/18 19:06:14 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 15:32:58 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Alloue (avec malloc(3)) et retourne une copie de
+// la chaîne ’s1’, sans les caractères spécifiés
+// dans ’set’ au début et à la fin de la chaîne de
+// caractères.
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

@@ -6,12 +6,14 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:17:59 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/11 16:00:26 by mflury           ###   ########.fr       */
+/*   Updated: 2022/11/30 15:22:04 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+// fonction qui duplique une string str avec malloc.
 
 char	*ft_strdup(const char *s)
 {
