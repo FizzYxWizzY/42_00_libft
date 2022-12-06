@@ -6,7 +6,7 @@
 /*   By: mflury <mflury@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:54:13 by mflury            #+#    #+#             */
-/*   Updated: 2022/11/30 14:36:21 by mflury           ###   ########.fr       */
+/*   Updated: 2022/12/06 15:14:36 by mflury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ static unsigned int	ft_wcount(char const *s, char c)
 }
 
 // sous fonction qui compte la longeur des "mots" dans la string str
-// avec le separateur c, retenu dans strlen.
+// avec le separateur c, le debut du mot etant str et la fin strlen.
 
-static void	ft_row(char **str, unsigned int *strlen, char c)
+static void	ft_get_row(char **str, unsigned int *strlen, char c)
 {
 	unsigned int	i;
 
@@ -98,7 +98,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (i < ft_wcount(s, c))
 	{
-		ft_row(&str, &strlen, c);
+		ft_get_row(&str, &strlen, c);
 		tab[i] = ft_calloc(sizeof(char), (strlen + 1));
 		if (tab[i] == NULL)
 			return (ft_free_all(tab));
